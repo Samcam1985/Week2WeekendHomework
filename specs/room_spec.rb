@@ -17,6 +17,10 @@ class TestRoom < MiniTest::Test
     @song_4 = Song.new("Queen", "Bohemian Rhapsody")
   end
 
+  def test_room_has_name
+    assert_equal("Vigo", @room_1.name())
+
+  end
   def test_add_guest()
     @room_1.check_in(@guest_1)
     assert_equal(1, @room_1.guest_count())
